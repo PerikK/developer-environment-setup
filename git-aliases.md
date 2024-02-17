@@ -46,6 +46,18 @@ alias gdd='git diff HEAD^ HEAD'
 alias gph='git push'
 
 # This lists the git aliases above in case you forget
-alias gitaliases="alias | grep -e \"='git\" | sed -e \"s/^alias /  /\""
+
+#Modified to show all created aliases. Shows some more things that it shouldn't
+alias gitaliases="alias | grep '^\s*alias ' | sed -e \"s/^alias /  /\""
+
+#Original grep
+#alias gitaliases="alias | grep -e \"='git\" | sed -e \"s/^alias /  /\""
+
+#Others that don't work as expected
+#alias gitaliases="alias | grep '^alias ' | sed -e \"s/^alias /  /\""
+#alias gitaliases="alias | grep '\= \w*git \w*' | sed -e \"s/^alias /  /\""
+#alias gitaliases="alias | grep -e \"='alias\" | sed -e \"s/^alias /  /\""
+
+
 
 ```
